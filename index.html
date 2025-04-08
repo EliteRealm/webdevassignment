@@ -1,1 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Registration System</title>
+    <meta name="description" content="Contact and registration system with HTML features" />
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:title" content="Contact & Registration System" />
+    <meta property="og:description" content="Contact and registration system with HTML features" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f7fa;
+        color: #333;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      h1, h2 {
+        color: #3a506b;
+      }
+      
+      /* Roman numerals list styling */
+      .roman-list {
+        margin: 20px 0;
+        padding-left: 2em;
+      }
+      
+      /* Image styling */
+      .feature-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      
+      /* Table styling */
+      .contacts-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      
+      .contacts-table th, .contacts-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      
+      .contacts-table th {
+        background-color: #3a506b;
+        color: white;
+      }
+      
+      .contacts-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      .contacts-table tr:hover {
+        background-color: #e5e5e5;
+      }
+      
+      /* Form styling */
+      .registration-form {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #3a506b;
+      }
+      
+      .form-group input, .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      
+      .form-check {
+        margin: 10px 0;
+      }
+      
+      .radio-group, .checkbox-group {
+        margin: 15px 0;
+      }
+      
+      .form-button {
+        background-color: #3a506b;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      
+      .form-button:hover {
+        background-color: #546a8c;
+      }
+      
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .contacts-table {
+          display: block;
+          overflow-x: auto;
+        }
+        
+        .form-group input, .form-group select {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Welcome to our Contact & Registration System</h1>
+      
+      <!-- Ordered list with Roman numerals -->
+      <h2>Project Phases</h2>
+      <ol type="I" class="roman-list">
+        <li>Information Gathering</li>
+        <li>User Registration</li>
+        <li>Contact Management</li>
+        <li>System Integration</li>
+        <li>Deployment</li>
+      </ol>
+      
+      <!-- External image from pexels.com -->
+      <img 
+        src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+        alt="Team collaborating around a table with documents" 
+        class="feature-image"
+      >
+      
+      <!-- Table of 5 contacts -->
+      <h2>Contact Directory</h2>
+      <div class="table-responsive">
+        <table class="contacts-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Mobile</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Smith</td>
+              <td>123 Main St, New York, NY 10001</td>
+              <td>(212) 555-1234</td>
+              <td>john.smith@example.com</td>
+            </tr>
+            <tr>
+              <td>Emma Johnson</td>
+              <td>456 Park Ave, Boston, MA 02108</td>
+              <td>(617) 555-2345</td>
+              <td>emma.j@example.com</td>
+            </tr>
+            <tr>
+              <td>Michael Brown</td>
+              <td>789 Oak Dr, San Francisco, CA 94102</td>
+              <td>(415) 555-3456</td>
+              <td>m.brown@example.com</td>
+            </tr>
+            <tr>
+              <td>Sophia Garcia</td>
+              <td>321 Maple Rd, Chicago, IL 60601</td>
+              <td>(312) 555-4567</td>
+              <td>s.garcia@example.com</td>
+            </tr>
+            <tr>
+              <td>William Lee</td>
+              <td>654 Pine St, Seattle, WA 98101</td>
+              <td>(206) 555-5678</td>
+              <td>will.lee@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Registration Form -->
+      <h2>User Registration</h2>
+      <form class="registration-form">
+        <!-- Personal Information Section -->
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input 
+            type="text" 
+            id="fullName" 
+            name="fullName" 
+            placeholder="Enter your full name" 
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="your.email@example.com" 
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="Create a secure password" 
+            minlength="8" 
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="birthdate">Date of Birth</label>
+          <input 
+            type="date" 
+            id="birthdate" 
+            name="birthdate"
+          >
+        </div>
+        
+        <!-- Dropdown Selection -->
+        <div class="form-group">
+          <label for="department">Department *</label>
+          <select id="department" name="department" required>
+            <option value="" disabled selected>Select your department</option>
+            <option value="sales">Sales</option>
+            <option value="marketing">Marketing</option>
+            <option value="it">Information Technology</option>
+            <option value="hr">Human Resources</option>
+            <option value="finance">Finance</option>
+          </select>
+        </div>
+        
+        <!-- Radio Buttons -->
+        <div class="form-group">
+          <label>Employment Status *</label>
+          <div class="radio-group">
+            <div class="form-check">
+              <input 
+                type="radio" 
+                id="fullTime" 
+                name="employmentStatus" 
+                value="fullTime" 
+                required
+              >
+              <label for="fullTime">Full-time</label>
+            </div>
+            <div class="form-check">
+              <input 
+                type="radio" 
+                id="partTime" 
+                name="employmentStatus" 
+                value="partTime"
+              >
+              <label for="partTime">Part-time</label>
+            </div>
+            <div class="form-check">
+              <input 
+                type="radio" 
+                id="contractor" 
+                name="employmentStatus" 
+                value="contractor"
+              >
+              <label for="contractor">Contractor</label>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Checkboxes -->
+        <div class="form-group">
+          <label>Skills (Select all that apply)</label>
+          <div class="checkbox-group">
+            <div class="form-check">
+              <input 
+                type="checkbox" 
+                id="skillProjectManagement" 
+                name="skills" 
+                value="projectManagement"
+              >
+              <label for="skillProjectManagement">Project Management</label>
+            </div>
+            <div class="form-check">
+              <input 
+                type="checkbox" 
+                id="skillProgramming" 
+                name="skills" 
+                value="programming"
+              >
+              <label for="skillProgramming">Programming</label>
+            </div>
+            <div class="form-check">
+              <input 
+                type="checkbox" 
+                id="skillDataAnalysis" 
+                name="skills" 
+                value="dataAnalysis"
+              >
+              <label for="skillDataAnalysis">Data Analysis</label>
+            </div>
+            <div class="form-check">
+              <input 
+                type="checkbox" 
+                id="skillCommunication" 
+                name="skills" 
+                value="communication"
+              >
+              <label for="skillCommunication">Communication</label>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Terms and Conditions -->
+        <div class="form-group">
+          <div class="form-check">
+            <input 
+              type="checkbox" 
+              id="termsAgreement" 
+              name="termsAgreement" 
+              required
+            >
+            <label for="termsAgreement">
+              I agree to the Terms and Conditions *
+            </label>
+          </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit" class="form-button">
+            Register
+          </button>
+        </div>
+        
+        <p><small>* Required fields</small></p>
+      </form>
+    </div>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
 
